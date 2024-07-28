@@ -51,9 +51,10 @@ router.post("/users", async (req, res) => {
 				newUserID,
 				userGithub,
 			]);
-			fetchPinnedProjects(userGithub);
-			fetchReadme(userGithub);
-			fetchActivity(userGithub);
+
+			await fetchReadme(userGithub);
+			await fetchActivity(userGithub);
+			// await fetchPinnedProjects(userGithub);
 		}
 
 		res.status(200).json({ success: true, data: { id: newUserID } });
