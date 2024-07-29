@@ -7,8 +7,8 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import UpdatePasswordForm from "./pages/UpdatePasswordForm";
-
-import Profile from "./components/Readme/Profile";
+import InfoPage from "./components/Info/InfoPage";
+import Profile from "./components/Profile/Profile";
 // import { Protected } from "./pages/Protected";
 
 import { Protected } from "./components/Protected";
@@ -22,8 +22,9 @@ const App = () => (
 			<Route path="/about/this/site" element={<About />} />
 			<Route path="/signup" element={<SignUp />} />
 			<Route path="/signIn" element={<SignIn />} />
-
+			<Route path="/info/:id" element={<InfoPage />} />
 			<Route path="/profile/:id" element={<Profile />} />
+
 			{/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
 			{/* <Route path="/grad-dashboard" element={<Protected element={GradDashboard} roles={["graduate", "mentor", "recruiter"]} />} /> */}
 
