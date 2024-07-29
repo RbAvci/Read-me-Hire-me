@@ -1,0 +1,47 @@
+.readme-container {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f4f4f4;
+}
+
+.readme-container h2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.readme-container p {
+	font-size: 1.1em;
+	line-height: 1.6;
+	color: #555;
+	margin-bottom: 20px;
+}
+
+.navig {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.navig a {
+	text-decoration: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	background-color: #ee4434;
+	color: white;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+	line-height: 40px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+}
+
+.navig a:hover {
+	background-color: #d32f2f;
+}

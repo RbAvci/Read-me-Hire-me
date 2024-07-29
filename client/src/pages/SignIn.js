@@ -41,7 +41,7 @@ const SignIn = () => {
 
 		if (result.success) {
 			localStorage.setItem("token", result.data.user.token);
-			navigate(`/profile/${result.data.id}`);
+			navigate(`/info/${result.data.id}`);
 		} else {
 			setMessage(`Error: ${result.message}`);
 		}
