@@ -7,6 +7,9 @@ import Project from "../Project/Project";
 import Contribution from "../Contribution/Contribution.js";
 import Avatar from "../Skills/Avatar";
 
+
+
+
 const Profile = () => {
 	const { id } = useParams();
 	const { user, error } = useFetchUser(id);
