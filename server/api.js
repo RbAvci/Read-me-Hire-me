@@ -160,7 +160,14 @@ router.post("/sign-in", hashPassword, async (req, res) => {
 				.json({ success: false, message: "Invalid password" });
 		}
 
-		const { user_type: userType, github_username: userGithub } = user;
+		const {
+			id: userId,
+			user_type: userType,
+			github_username: userGithub,
+		} = user;
+		if (userId) {
+			deleteUserData(userId);
+		}
 		if (userType === "graduate" && userGithub) {
 			await fetchReadme(userGithub);
 			await fetchActivity(userGithub);
