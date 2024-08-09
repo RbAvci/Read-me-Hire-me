@@ -1,0 +1,37 @@
+.container {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+	max-width: 800px;
+	margin: auto;
+	height: fit-content;
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 1.2rem;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+ul {
+	margin-left: 20px;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+strong {
+	font-weight: bold;
+}

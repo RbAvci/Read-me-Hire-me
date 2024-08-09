@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import "./Footer.css";
+import Contact from "./contact/contact";
+import About from "./aboutUs/About";
 
 const Footer = () => (
 	<footer className="footer">
@@ -13,12 +15,17 @@ const Footer = () => (
 				>
 					GitHub
 				</a>
-				<Link to="/contact">Contact</Link>
+				<Link to="/contact">Contact Us</Link>
 			</nav>
 			<div className="copyright">
 				&copy; {new Date().getFullYear()} CYF. All rights reserved.
 			</div>
 		</div>
+
+		<Routes>
+			<Route path="/contact" element={<Contact />} />
+			<Route path="/about" element={<About />} />
+		</Routes>
 	</footer>
 );
 
