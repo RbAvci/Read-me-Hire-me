@@ -8,6 +8,7 @@ import { roleBasedAuth } from "./utils/middleware";
 import fetchActivity from "./controller/fetchActivity";
 import fetchReadme from "./controller/fetchReadme";
 import infoRouter from "./routes/getInfoRouter";
+import listRouter from "./routes/getListRouter";
 import FetchSkills from "./controller/fetchSkills";
 import hashPassword from "./middlewares/hashPassword";
 import nodemailer from "nodemailer";  // For sending emails
@@ -363,5 +364,6 @@ router.post("/reset-password", hashPassword, async (req, res) => {
 		res.status(500).json({ message: "Failed to reset password." });
 	}
 });
+router.use("/list", listRouter)
 router.use("/info", infoRouter);
 export default router;
