@@ -3,7 +3,7 @@ import db from "../db";
 export default async function deleteUserData(userId) {
 	try {
 		const userResponse = await db.query(
-			`SELECT * FROM users WHERE userId = $1`,
+			`SELECT * FROM users WHERE id = $1`,
 			[userId]
 		);
 
