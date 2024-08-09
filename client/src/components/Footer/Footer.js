@@ -1,7 +1,7 @@
 import { Link, Routes, Route } from "react-router-dom";
 import "./Footer.css";
 import Contact from "./contact/contact";
-// import About from "./about/About";
+import About from "./aboutUs/About";
 
 const Footer = () => (
 	<footer className="footer">
@@ -24,7 +24,7 @@ const Footer = () => (
 
 		<Routes>
 			<Route path="/contact" element={<Contact />} />
-			<Route path="/about" />
+			<Route path="/about" element={<About />} />
 		</Routes>
 	</footer>
 );
