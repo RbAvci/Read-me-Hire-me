@@ -15,6 +15,7 @@ import crypto from "crypto";  // For generating tokens
 
 
 import fetchPullRequests from "./controller/fetchPullRequests";
+import deleteUserData from "./controller/deleteUserData";
 
 const router = Router();
 
@@ -112,6 +113,8 @@ router.delete("/users/:id", async (req, res) => {
 	const userId = req.params.id;
 
 	try {
+		await deleteUserData(userId)
+
 		const result = await db.query(
 			"DELETE FROM users WHERE id = $1 RETURNING id",
 			[userId]
